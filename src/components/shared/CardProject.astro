@@ -1,13 +1,15 @@
 ---
+import Tag from "./Tag.astro";
 interface Props {
     title: string;
     description: string;
     ariaLabel: string;
     href: string;
     img: string;
+    tags: string[];
 }
 
-const { href, title, description, ariaLabel, img } = Astro.props;
+const { href, title, description, ariaLabel, img, tags } = Astro.props;
 ---
 
 <div
@@ -27,7 +29,7 @@ const { href, title, description, ariaLabel, img } = Astro.props;
                 ><span
                     class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
                 ></span><span
-                    >{title}<!-- -->
+                    >{title}
                     <span class="inline-block"
                         ><svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -47,35 +49,17 @@ const { href, title, description, ariaLabel, img } = Astro.props;
             {description}
         </p>
         <ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
-            <li class="mr-1.5 mt-2">
-                <div
-                    class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                >
-                    Next.js
-                </div>
-            </li><li class="mr-1.5 mt-2">
-                <div
-                    class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                >
-                    Semantic Html
-                </div>
-            </li><li class="mr-1.5 mt-2">
-                <div
-                    class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                >
-                    SSR / CSR
-                </div>
-            </li>
-            <li class="mr-1.5 mt-2">
-                <div
-                    class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                >
-                    Web performance
-                </div>
-            </li>
+            {
+                // watch out here we use parenthesis instead of {}
+                tags.map((tag) => (
+                    <li class="mr-1.5 mt-2">
+                        <Tag name={tag} />
+                    </li>
+                ))
+            }
         </ul>
     </div><img
-        alt="Build a website for a theater collective"
+        alt={ariaLabel}
         loading="lazy"
         width="200"
         height="48"
