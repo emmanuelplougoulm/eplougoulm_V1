@@ -1,5 +1,6 @@
 ---
 import CardProject from "../shared/CardProject.astro";
+import { projects } from "../../config/projects.config";
 ---
 
 <section
@@ -17,24 +18,20 @@ import CardProject from "../shared/CardProject.astro";
         </h2>
     </div><div>
         <ul class="group/list">
-            <li class="mb-12">
-                <CardProject
-                    title="P4 Collective webapp"
-                    description="Theater collective website"
-                    ariaLabel="Build a Spotify Connected App (opens in a new tab)"
-                    href="https://nextjs-collectif-p4.vercel.app/"
-                    img="/p4_thumbnail.webp"
-                />
-            </li>
-            <li class="mb-12">
-                <CardProject
-                    title="CryptoBubbles clone"
-                    description="A clone of the famous crypto market forecast built with modern React tools"
-                    ariaLabel="Build a cryptobubbles clone (opens in a new tab)"
-                    href="https://github.com/emmanuelplougoulm/cryptobubbles-clone"
-                    img="/bubbles_thumbnail.webp"
-                />
-            </li>
+            {
+                projects.map((item) => (
+                    <li class="mb-12">
+                        <CardProject
+                            title={item.title}
+                            description={item.description}
+                            ariaLabel={item.ariaLabel}
+                            href={item.href}
+                            img={item.img}
+                            tags={item.tags}
+                        />
+                    </li>
+                ))
+            }
         </ul>
     </div>
 </section>
