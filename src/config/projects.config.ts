@@ -25,4 +25,13 @@ export const projects: Array<Project> = [
 		img: "/bubbles_thumbnail.webp",
 		tags: ["Vite.js", "Biome.js", "Shadcn", "React.js", "Bun"],
 	},
+	{
+		title: "Moula manager",
+		description:
+			"Webapp based on NuxtJS to display crypto-currencies portfolio",
+		ariaLabel: "Webapp based on NuxtJS to display crypto-currencies portfolio",
+		href: "https://github.com/emmanuelplougoulm/moula-manager",
+		img: "/bubbles_thumbnail.webp",
+		tags: ["Vue.js", "Nest.js", "Typescript"],
+	},
 ];
