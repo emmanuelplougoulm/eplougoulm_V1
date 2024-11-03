@@ -11,6 +11,11 @@ export default {
 
 				divider: "#545454",
 			},
+			blur: {
+				"4xl": "64px",
+				"5xl": "80px",
+				"6xl": "100px",
+			},
 		},
 	},
 	plugins: [],
