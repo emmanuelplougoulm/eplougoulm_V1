@@ -2,10 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/Header.astro";
 import Content from "../components/Content.astro";
+import Gradient from "../components/shared/gradient.astro";
 ---
 
 <Layout>
-	<div class="lg:flex lg:justify-between lg:gap-4">
+	<Gradient class="z-0" />
+	<div class="lg:flex lg:justify-between lg:gap-4 z-1">
 		<Header />
 		<Content />
 	</div>
