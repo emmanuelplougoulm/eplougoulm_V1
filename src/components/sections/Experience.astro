@@ -12,12 +12,12 @@ import { experiences } from "../../config/experiences.config";
         class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
     >
         <h2
-            class="text-sm font-bold uppercase tracking-widest text-highlighted lg:sr-only"
+            class="text-sm font-bold uppercase tracking-widest text-grey-light lg:sr-only"
         >
             Experience
         </h2>
     </div><div>
-        <ol class="group/list">
+        <ul class="group/list">
             {
                 experiences.map((item) => (
                     <li class="mb-12">
@@ -32,12 +32,12 @@ import { experiences } from "../../config/experiences.config";
                     </li>
                 ))
             }
-        </ol>
+        </ul>
     </div>
 
     <div class="mt-12">
         <a
-            class="inline-flex items-baseline font-medium leading-tight text-highlighted hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+            class="inline-flex items-baseline font-medium leading-tight hover:text-color-primary focus-visible:text-color-primary group/link text-base"
             href="resume.pdf"
             target="_blank"
             rel="noreferrer noopener"

@@ -4,12 +4,11 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"purple-dark": "#151526",
-				"purple-electric": "#8C64C4",
-				"grey-light": "#fdfdfc",
-				"grey-medium": "#b2b7cf",
-
-				divider: "#545454",
+				"color-primary": "#66ffff" /* Light purple */,
+				"color-secondary": " #ccd6f6" /* Blanc cassé */,
+				"color-tertiary": " #8892b0" /* Gris clair */,
+				"color-background": "#151526" /* Dark purple */,
+				"color-accent": " #64ffda" /* Same primary color, used to accentuate */,
 			},
 			blur: {
 				"4xl": "64px",
