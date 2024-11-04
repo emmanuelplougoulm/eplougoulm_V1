@@ -3,18 +3,19 @@
         <li>
             <a class="group flex items-center py-3 active" href="#about"
                 ><span
-                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-highlighted group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
                 ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-slate-200"
+                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
                     >About</span
                 ></a
             >
-        </li><li>
+        </li>
+        <li>
             <a class="group flex items-center py-3" href="#experience"
                 ><span
-                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-highlighted group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
                 ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-slate-200"
+                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
                     >Experience</span
                 ></a
             >
@@ -22,9 +23,9 @@
         <li>
             <a class="group flex items-center py-3" href="#skills"
                 ><span
-                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-highlighted group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
                 ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-highlighted group-focus-visible:text-slate-200"
+                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
                     >Skills</span
                 ></a
             >
@@ -32,12 +33,43 @@
         <li>
             <a class="group flex items-center py-3" href="#projects"
                 ><span
-                    class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-highlighted group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"
+                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
                 ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-slate-200"
+                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
                     >Projects</span
                 ></a
             >
         </li>
     </ul>
 </nav>
+
+<style>
+    .active {
+        color: #ccd6f6;
+    }
+    .nav-indicator {
+        width: 1rem; /* Equivalent to w-4 */
+    }
+
+    a.active .nav-indicator {
+        width: 4rem; /* Equivalent to w-16 */
+        background-color: #ccd6f6;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav a");
+
+        function removeActiveClasses() {
+            navLinks.forEach((link) => link.classList.remove("active"));
+        }
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                removeActiveClasses();
+                link.classList.add("active");
+            });
+        });
+    });
+</script>
