@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import Content from "../components/Content.astro";
+import Line from "../components/shared/Line.astro";
+import { projectArchive } from "../config/projects-archive.config";
+---
+
+<Layout>
+    <div class="lg:flex lg:justify-between lg:gap-4 z-1 flex flex-col">
+        <div class="mt-20">
+            <a
+                class="inline-flex items-baseline font-medium leading-tight text-highlighted hover:hover:text-color-primary focus-visible:text-color-primary group/link text-base"
+                href="/"
+                aria-label="View Full Résumé (opens in a new tab)"
+                ><span
+                    >return <!-- -->
+                    <span class="inline-block"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                            aria-hidden="true"
+                            ><path
+                                fill-rule="evenodd"
+                                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                clip-rule="evenodd"></path></svg
+                        ></span
+                    ></span
+                ></a
+            >
+            <h1>All projects</h1>
+        </div>
+        <div class="mt-4">
+            <table class="w-full">
+                <thead class="w-full">
+                    <tr class="flex w-full">
+                        <th class="text-left mr-6">Year</th>
+                        <th class="text-left mr-6 w-64">Project</th>
+                        <th class="text-left mr-6 w-80">Built with</th>
+                        <th class="text-left mr-6">Link</th>
+                    </tr>
+                </thead>
+                <tbody class="w-full">
+                    {
+                        projectArchive.map((item) => (
+                            <Line
+                                year={item.year}
+                                project={item.project}
+                                tags={item.tags}
+                                href={item.href}
+                            />
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</Layout>
