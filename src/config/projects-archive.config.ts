@@ -18,6 +18,25 @@ export const projectArchive: Array<Project> = [
 		tags: ["Next.js", "Semantic Html", "SSR/CSR", "Web performance"],
 		href: "https://nextjs-collectif-p4.vercel.app/",
 	},
+
+	{
+		year: "2024",
+		project: "Worklife",
+		tags: ["Vue.js", "Nuxt", "Typescript", "Pinia"],
+		href: "https://github.com/emmanuelplougoulm/test_worklife",
+	},
+	{
+		year: "2024",
+		project: "Weglot",
+		tags: ["Javascript", "Scripting", "Algo"],
+		href: "https://github.com/emmanuelplougoulm/weglot_test",
+	},
+	{
+		year: "2024",
+		project: "First Dapp",
+		tags: ["Next", "Solidity", "Foundry", "Viem", "Wagmi"],
+		href: "https://github.com/emmanuelplougoulm/dapp",
+	},
 	{
 		year: "2023",
 		project: "Moula manager",
@@ -25,27 +44,9 @@ export const projectArchive: Array<Project> = [
 		href: "https://github.com/emmanuelplougoulm/moula-manager",
 	},
 	{
-		year: "2024",
-		project: "Worklife",
-		tags: ["Vue.js", "Nest.js", "Typescript"],
-		href: "https://github.com/emmanuelplougoulm/test_worklife",
-	},
-	{
-		year: "2024",
-		project: "Weglot",
-		tags: ["Javascript"],
-		href: "https://github.com/emmanuelplougoulm/weglot_test",
-	},
-	{
-		year: "2024",
-		project: "First Dapp",
-		tags: [""],
-		href: "https://github.com/emmanuelplougoulm/dapp",
-	},
-	{
 		year: "2021",
 		project: "Automating copass",
-		tags: [""],
+		tags: ["Node.js", "Puppeteer"],
 		href: "https://github.com/emmanuelplougoulm/automating-copass",
 	},
 ];
