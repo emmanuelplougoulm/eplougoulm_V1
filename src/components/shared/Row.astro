@@ -1,0 +1,23 @@
+---
+import Tag from "./Tag.astro";
+
+interface Props {
+    year: string;
+    project: string;
+    tags: string[];
+    href: string;
+}
+
+const { year, project, tags, href } = Astro.props;
+---
+
+<tr
+    class="min-h-16 text-left border-b border-b-1 border-gray-500 border-opacity-30 last:border-none"
+>
+    <td class="py-4 pr-4 align-top"> {year}</td>
+    <td class="py-4 pr-4 align-top text-color-secondary"> {project}</td>
+    <td class="py-4 pr-4 align-top flex items-center flex-wrap">
+        {tags.map((tag) => <Tag name={tag} />)}
+    </td>
+    <td class="py-4 pr-4 text-left align-top text-sm grow-1"> {href}</td>
+</tr>
