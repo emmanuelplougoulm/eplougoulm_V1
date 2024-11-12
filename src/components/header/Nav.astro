@@ -1,75 +1,65 @@
 <nav class="nav hidden lg:block" aria-label="In-page jump links">
-    <ul class="mt-16 w-max">
-        <li>
-            <a class="group flex items-center py-3 active" href="#about"
-                ><span
-                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
-                ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
-                    >About</span
-                ></a
-            >
-        </li>
-        <li>
-            <a class="group flex items-center py-3" href="#experience"
-                ><span
-                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
-                ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
-                    >Experience</span
-                ></a
-            >
-        </li>
-        <!-- <li>
-            <a class="group flex items-center py-3" href="#skills"
-                ><span
-                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
-                ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
-                    >Skills</span
-                ></a
-            >
-        </li> -->
-        <li>
-            <a class="group flex items-center py-3" href="#projects"
-                ><span
-                    class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
-                ></span><span
-                    class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
-                    >Projects</span
-                ></a
-            >
-        </li>
-    </ul>
+  <ul class="mt-16 w-max">
+    <li>
+      <a class="group flex items-center py-3 active" href="#about"
+        ><span
+          class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
+        ></span><span
+          class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
+          >About</span
+        ></a
+      >
+    </li>
+    <li>
+      <a class="group flex items-center py-3" href="#experience"
+        ><span
+          class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
+        ></span><span
+          class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
+          >Experience</span
+        ></a
+      >
+    </li>
+    <li>
+      <a class="group flex items-center py-3" href="#projects"
+        ><span
+          class="nav-indicator mr-4 h-px bg-color-tertiary transition-all group-hover:w-16 group-hover:bg-color-secondary group-focus-visible:w-16 group-focus-visible:bg-color-secondary motion-reduce:transition-none"
+        ></span><span
+          class="nav-text text-xs font-bold uppercase tracking-widest text-grey-medium group-hover:text-color-secondary group-focus-visible:text-color-secondary"
+          >Projects</span
+        ></a
+      >
+    </li>
+  </ul>
 </nav>
 
 <style>
-    .active {
-        color: #ccd6f6;
-    }
-    .nav-indicator {
-        width: 1rem; /* Equivalent to w-4 */
-    }
+  .active {
+    color: #ccd6f6;
+  }
+  .nav-indicator {
+    width: 1rem; /* Equivalent to w-4 */
+  }
 
-    a.active .nav-indicator {
-        width: 4rem; /* Equivalent to w-16 */
-        background-color: #ccd6f6;
-    }
+  a.active .nav-indicator {
+    width: 4rem; /* Equivalent to w-16 */
+    background-color: #ccd6f6;
+  }
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll(".nav a");
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav a");
 
-        function removeActiveClasses() {
-            navLinks.forEach((link) => link.classList.remove("active"));
-        }
+    function removeActiveClasses() {
+      navLinks.forEach((link) => link.classList.remove("active"));
+    }
 
-        navLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                removeActiveClasses();
-                link.classList.add("active");
-            });
-        });
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        removeActiveClasses();
+        link.classList.add("active");
+      });
     });
+  });
 </script>

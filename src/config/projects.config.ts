@@ -31,7 +31,7 @@ export const projects: Array<Project> = [
 			"Webapp based on NuxtJS to display crypto-currencies portfolio",
 		ariaLabel: "Webapp based on NuxtJS to display crypto-currencies portfolio",
 		href: "https://github.com/emmanuelplougoulm/moula-manager",
-		img: "/bubbles_thumbnail.webp",
+		img: "/moula_manager.webp",
 		tags: ["Vue.js", "Nest.js", "Typescript"],
 	},
 ];

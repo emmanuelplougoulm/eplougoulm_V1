@@ -19,17 +19,17 @@ export const projectArchive: Array<Project> = [
 		href: "https://nextjs-collectif-p4.vercel.app/",
 	},
 
+	// {
+	// 	year: "2024",
+	// 	project: "Worklife",
+	// 	tags: ["Vue.js", "Nuxt", "Typescript", "Pinia"],
+	// 	href: "https://github.com/emmanuelplougoulm/test_worklife",
+	// },
 	{
 		year: "2024",
-		project: "Worklife",
-		tags: ["Vue.js", "Nuxt", "Typescript", "Pinia"],
-		href: "https://github.com/emmanuelplougoulm/test_worklife",
-	},
-	{
-		year: "2024",
-		project: "Weglot",
+		project: "Time slots algo",
 		tags: ["Javascript", "Scripting", "Algo"],
-		href: "https://github.com/emmanuelplougoulm/weglot_test",
+		href: "https://github.com/emmanuelplougoulm/_time_slots_algo",
 	},
 	{
 		year: "2024",
@@ -46,7 +46,7 @@ export const projectArchive: Array<Project> = [
 	{
 		year: "2021",
 		project: "Automating copass",
-		tags: ["Node.js", "Puppeteer"],
+		tags: ["Node.js", "Puppeteer","Automation"],
 		href: "https://github.com/emmanuelplougoulm/automating-copass",
 	},
 ];

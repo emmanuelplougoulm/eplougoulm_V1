@@ -26,7 +26,7 @@ export const experiences: Array<Experience> = [
 	{
 		date: "2018 - 2021",
 		position: "Fullstack developer",
-		company: "Groupe Onepoint",
+		company: "Onepoint group",
 		href: "https://www.groupeonepoint.com/fr/",
 		achievements: [
 			"- HR management tool implementation used by 3000 users",
