@@ -1,13 +1,13 @@
 ---
 interface Props {
-    name: string;
+  name: string;
 }
 
 const { name } = Astro.props;
 ---
 
-<div
-    class="flex items-center rounded-full bg-color-primary/10 px-3 py-1 text-xs font-medium leading-5 text-color-primary m-1"
+<span
+  class="items-center rounded-full bg-color-primary/10 px-3 py-1 text-xs font-medium leading-5 text-color-primary m-1"
 >
-    {name}
-</div>
+  {name}
+</span>

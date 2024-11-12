@@ -5,48 +5,48 @@ import { projectArchive } from "../config/projects-archive.config";
 ---
 
 <Layout>
-    <div class="lg:flex lg:justify-between lg:gap-4 z-1 flex flex-col">
-        <div class="mt-20">
-            <a
-                class="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300"
-                href="/"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    class="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2"
-                    aria-hidden="true"
-                    ><path
-                        fill-rule="evenodd"
-                        d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                        clip-rule="evenodd"></path></svg
-                >Back</a
-            >
-            <h1 class="text-5xl text-color-secondary">All projects</h1>
-        </div>
-        <div class="mt-4">
-            <table>
-                <thead class="text-left px-6 py-5 text-color-secondary">
-                    <tr class="">
-                        <th class="pr-8 py-4 mr-6 w-14">Year</th>
-                        <th class="mr-6 w-64">Project</th>
-                        <th class="mr-6 w-80">Built with</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        projectArchive.map((item) => (
-                            <Row
-                                year={item.year}
-                                project={item.project}
-                                tags={item.tags}
-                                href={item.href}
-                            />
-                        ))
-                    }
-                </tbody>
-            </table>
-        </div>
+  <div class="lg:flex lg:justify-between lg:gap-4 z-1 flex flex-col">
+    <div class="mt-20">
+      <a
+        class="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300"
+        href="/"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2"
+          aria-hidden="true"
+          ><path
+            fill-rule="evenodd"
+            d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+            clip-rule="evenodd"></path></svg
+        >Back</a
+      >
+      <h1 class="text-5xl text-color-secondary">All projects</h1>
     </div>
+    <div class="mt-4">
+      <table class="w-full text-left align-top">
+        <thead>
+          <tr>
+            <th class="w-14">Year</th>
+            <th class="mr-6 w-64">Project</th>
+            <th class="mr-6 w-100 hidden lg:table-cell">Built with</th>
+            <th class="">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            projectArchive.map((item) => (
+              <Row
+                year={item.year}
+                project={item.project}
+                tags={item.tags}
+                href={item.href}
+              />
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
 </Layout>
