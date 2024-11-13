@@ -8,6 +8,12 @@ interface Project {
 export const projectArchive: Array<Project> = [
 	{
 		year: "2024",
+		project: "Kanban like",
+		tags: [ "Vue.js", "Vite.js","Pinia" ],
+		href: "https://github.com/emmanuelplougoulm/paylead",
+	},
+	{
+		year: "2024",
 		project: "Cryptobubbles clone",
 		tags: ["Vite.js", "Biome.js", "Shadcn", "React.js", "Bun"],
 		href: "https://github.com/emmanuelplougoulm/cryptobubbles-clone",
@@ -18,13 +24,6 @@ export const projectArchive: Array<Project> = [
 		tags: ["Next.js", "Semantic Html", "SSR/CSR", "Web performance"],
 		href: "https://nextjs-collectif-p4.vercel.app/",
 	},
-
-	// {
-	// 	year: "2024",
-	// 	project: "Worklife",
-	// 	tags: ["Vue.js", "Nuxt", "Typescript", "Pinia"],
-	// 	href: "https://github.com/emmanuelplougoulm/test_worklife",
-	// },
 	{
 		year: "2024",
 		project: "Time slots algo",
