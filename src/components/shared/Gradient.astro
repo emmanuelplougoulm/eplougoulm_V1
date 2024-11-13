@@ -1,18 +1,14 @@
----
-// GradientFollower.astro
----
-
 <script>
-    document.addEventListener("mousemove", (e) => {
-        const gradient = document.getElementById("gradient");
-        if (gradient) {
-            gradient.style.transform = `translate3d(${e.clientX - 128}px, ${e.clientY - 128}px, 0)`;
-        }
-    });
+  document.addEventListener("mousemove", (e) => {
+    const gradient = document.getElementById("gradient");
+    if (gradient) {
+      gradient.style.transform = `translate3d(${e.clientX - 128}px, ${e.clientY - 128}px, 0)`;
+    }
+  });
 </script>
 
 <div
-    id="gradient"
-    class="fixed top-0 left-0 w-64 h-64 rounded-full pointer-events-none bg-gradient-to-r from-color-background to-indigo-500 opacity-75 blur-6xl"
+  id="gradient"
+  class="fixed top-0 left-0 w-64 h-64 rounded-full pointer-events-none bg-gradient-to-r from-color-background to-indigo-500 opacity-45 blur-6xl"
 >
 </div>

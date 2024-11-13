@@ -4,25 +4,39 @@ import Gradient from "../components/shared/Gradient.astro";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-	</head>
-	<body class="bg-color-background">
-		<Gradient class="z-0" />
-		<div
-			class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
-		>
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Emmanuel Plougoulm Frontend engineer" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/src/assets/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/assets/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/src/assets/site.webmanifest" />
+  </head>
+  <body class="bg-color-background">
+    <Gradient class="z-0" />
+    <div
+      class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
+    >
+      <slot />
+    </div>
+  </body>
 </html>
 <style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-		color: #8892b0;
-		scroll-behavior: smooth;
-	}
+  html {
+    font-family: system-ui, sans-serif;
+    color: #8892b0;
+    scroll-behavior: smooth;
+  }
 </style>
