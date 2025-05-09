@@ -13,7 +13,7 @@ export const projects: Array<Project> = [
     description: "A homemade library built for my projects",
     ariaLabel: "A homemade library built for my projects",
     href: "https://emmanuelplougoulm.github.io/components_library/",
-    img: "",
+    img: "/design-system.png",
     tags: ["Vue.js", "Design system"],
   },
   {
